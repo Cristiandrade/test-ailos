@@ -1,0 +1,138 @@
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.padding-20 {
+  padding: 20px;
+}
+
+.sidenav {
+  background-color: #005c7f;
+  grid-area: sidenav;
+  width: 125px;
+  z-index: 110;
+  top: 0;
+
+  .list-style {
+    padding: 0;
+    text-align: center;
+    list-style: none;
+  }
+
+  .inner-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .brand {
+      background-color: #005c7f;
+      width: 100%;
+      height: 50px;
+      padding: 15px 10px;
+      z-index: 100;
+
+      img {
+        width: 100%;
+        max-height: 32px;
+      }
+    }
+
+    .menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      margin-top: 100px;
+      flex: 1;
+      width: 60px;
+      overflow: visible;
+      position: absolute;
+
+      .menu-item {
+        cursor: pointer;
+        margin: 10px 5px;
+        padding: 10px 5px 10px 5px;
+        background-color: transparent;
+        transition: background-color ease-in-out 300ms, width ease-in-out 300ms,
+          box-shadow ease-in-out 300ms;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        border-radius: 10px;
+
+        &:hover {
+          width: 250px;
+        }
+
+        &.always-show {
+          width: 92%;
+        }
+
+        &:hover,
+        &.always-show {
+          background-color: #ffffff;
+          box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 10%),
+            1px 1px 1px 0px rgb(0 0 0 / 10%);
+
+          .icon-menu {
+            opacity: 1;
+          }
+
+          .menu-label {
+            transform: translateX(0px);
+            opacity: 1;
+            margin: 0px;
+          }
+        }
+
+        &.active {
+          &::before {
+            content: " ";
+            width: 3px;
+            height: 75%;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #fff;
+          }
+
+          .icon-menu {
+            opacity: 1;
+          }
+        }
+
+        .icon-menu {
+          opacity: 0.5;
+          color: #fff;
+          transition: color ease-in-out 300ms;
+          position: absolute;
+          left: 10px;
+          width: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+
+          .icon {
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 889px) {
+  .sidenav {
+    position: fixed;
+    height: 100%;
+
+    .menu {
+      overflow-y: auto;
+    }
+  }
+}

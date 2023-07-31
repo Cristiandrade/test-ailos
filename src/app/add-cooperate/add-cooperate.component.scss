@@ -1,0 +1,33 @@
+.content {
+  margin-left: 125px;
+  padding: 30px;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.content-cooperate {
+  background: var(--escala-de-cinza-pattens-blue, #e7eef1);
+  margin-left: 125px;
+  padding: 30px;
+  height: 100%;
+
+  .title {
+    color: var(--neutral-neutral-10, #101213);
+    font-family: Open Sans;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+  }
+
+  .description {
+    color: var(--neutral-neutral-8, #4f575e);
+    font-family: Open Sans;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

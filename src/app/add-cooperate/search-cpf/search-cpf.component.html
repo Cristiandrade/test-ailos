@@ -1,0 +1,26 @@
+<div class="search-cpf row">
+  <p>CPF</p>
+  <form [formGroup]="formCooperate">
+    <div class="display-search">
+      <input
+        [class]="
+          formError ? 'input-border-color-error' : 'input-border-color-none'
+        "
+        type="text"
+        formControlName="cpf"
+        [mask]="'000.000.000-00'"
+        placeholder="000.000.000-00"
+      />
+      <button (click)="searchCpf()">
+        <label *ngIf="!loading">Consultar por CPF</label>
+        <div *ngIf="loading">
+          <app-icon-loading></app-icon-loading>
+        </div>
+      </button>
+    </div>
+    <span class="error-label" *ngIf="formError"> Informe um CPF válido </span>
+    <span class="error-label" *ngIf="resultEmpty"> Nenhum CPF encontrado </span>
+  </form>
+
+  <app-result [cooperate]="cooperate"></app-result>
+</div>

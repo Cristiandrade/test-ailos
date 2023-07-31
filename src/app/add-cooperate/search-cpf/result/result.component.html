@@ -1,0 +1,62 @@
+<div *ngIf="cooperate" class="row-result">
+  <div class="col-result">
+    <div class="title">Situação cadastral do CPF</div>
+    <div class="description">Consulta na Receita Federal</div>
+
+    <div class="card-cooperate">
+      <app-icon-personal></app-icon-personal>
+      <div class="infos">
+        <span class="label-name">Nome</span><br />
+        <span class="name">{{ cooperate.name }}</span>
+      </div>
+    </div>
+
+    <div class="card-cooperate">
+      <app-icon-check></app-icon-check>
+      <div class="infos">
+        <span class="label-name">Situação do CPF</span><br />
+        <span class="name">{{ cooperate.cpfSitutation }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-result">
+    <div class="title">Conta aplicação</div>
+    <div class="description">Cooperativa {{ cooperate.cooperative }}</div>
+    <div class="card-cooperate">
+      <span class="material-symbols-outlined" style="margin-top: 10px">
+        credit_card
+      </span>
+      <div class="infos">
+        <span class="label-name">Número da Conta</span><br />
+        <span class="name">{{ cooperate.numberCountAplication }}</span>
+      </div>
+    </div>
+
+    <div class="card-cooperate">
+      <div class="infos">
+        <span class="label-color-primary">Duplicar conta</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-result">
+    <div class="title">Conta Corrente</div>
+    <div class="description">Cooperativa {{ cooperate.cooperative }}</div>
+    <div class="card-cooperate">
+      <span class="material-symbols-outlined" style="margin-top: 10px">
+        credit_card
+      </span>
+      <div class="infos">
+        <span class="label-name">Número da Conta</span><br />
+        <span class="name">{{ cooperate.numberCurrentAccount }}</span>
+      </div>
+    </div>
+
+    <div class="card-cooperate">
+      <div class="infos">
+        <span class="label-color-primary">Duplicar conta</span>
+      </div>
+    </div>
+  </div>
+</div>

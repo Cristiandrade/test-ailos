@@ -1,0 +1,35 @@
+.content {
+  margin-left: 125px;
+  padding: 30px;
+}
+
+.row {
+  flex-direction: row;
+}
+.header {
+  .title {
+    color: var(--neutral-neutral-10, #101213);
+    font-family: "Exo 2", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 133.333% */
+  }
+
+  .description {
+    color: var(--cor-texto-sutil, #787878);
+    font-family: Open Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+  }
+
+  .content-right {
+    float: right;
+    padding: 30px;
+    top: 0px;
+    position: absolute;
+    right: 0px;
+  }
+}
